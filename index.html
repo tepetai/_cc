@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            var text = `<nav>
+        <ul class="menu">
+            <li>Главная</li>
+
+            <li>
+                О нас
+                <ul >
+                    <li>История</li>
+                    <li>Команды</li>
+                    <li>И тд</li>
+                </ul>
+            </li>
+
+            <li>
+                Сервисы
+                <ul >
+                    <li>SEO</li>
+                    <li>Marketing</li>
+                </ul>
+            </li>
+
+            <li>
+                Контакты
+                <ul>
+                    <li>Email</li>
+                    <li>Phone</li>
+
+                    <li>
+                        Соц Сети
+                        <ul >
+                            <li>вк</li>
+                            <li>ютуб</li>
+                            <li>и тд</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Мессенджеры
+                        <ul >
+                            <li>телега</li>
+                            <li>ватцап</li>
+                            <li>и тд</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    background: white;
+    display: flex;
+    gap: 30px;
+}
+
+.menu > li {
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.menu > li:hover {
+    background: white;
+}
+
+.menu ul {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
+    background: white;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu ul li {
+    position: relative;
+    padding: 15px;
+}
+
+.menu ul li:hover {
+    background: white;
+}
+
+.menu ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.menu ul li:hover > ul {
+    display: block;
+}
+`;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+</html>
