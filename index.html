@@ -113,5 +113,30 @@
             navigator.clipboard.writeText(text);
         }
     </script>
+
+    <div style="width:220px;margin:10px auto;padding:12px;background:#f5f5f5;border-radius:10px;box-shadow:0 2px 12px #0001;">
+    <input id="calcInput" type="text" style="width:100%;font-size:18px;padding:6px 10px;margin-bottom:8px;border-radius:5px;border:1px solid #bbb;outline:none;box-sizing:border-box;" readonly>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+        <button onclick="calcInput.value+='7'" style="padding:10px;font-size:16px;border-radius:5px;">7</button>
+        <button onclick="calcInput.value+='8'" style="padding:10px;font-size:16px;border-radius:5px;">8</button>
+        <button onclick="calcInput.value+='9'" style="padding:10px;font-size:16px;border-radius:5px;">9</button>
+        <button onclick="calcInput.value+='/'" style="padding:10px;font-size:16px;border-radius:5px;">÷</button>
+        <button onclick="calcInput.value+='4'" style="padding:10px;font-size:16px;border-radius:5px;">4</button>
+        <button onclick="calcInput.value+='5'" style="padding:10px;font-size:16px;border-radius:5px;">5</button>
+        <button onclick="calcInput.value+='6'" style="padding:10px;font-size:16px;border-radius:5px;">6</button>
+        <button onclick="calcInput.value+='*'" style="padding:10px;font-size:16px;border-radius:5px;">×</button>
+        <button onclick="calcInput.value+='1'" style="padding:10px;font-size:16px;border-radius:5px;">1</button>
+        <button onclick="calcInput.value+='2'" style="padding:10px;font-size:16px;border-radius:5px;">2</button>
+        <button onclick="calcInput.value+='3'" style="padding:10px;font-size:16px;border-radius:5px;">3</button>
+        <button onclick="calcInput.value+='-'" style="padding:10px;font-size:16px;border-radius:5px;">−</button>
+        <button onclick="calcInput.value+='0'" style="padding:10px;font-size:16px;border-radius:5px;">0</button>
+        <button onclick="calcInput.value+='.'" style="padding:10px;font-size:16px;border-radius:5px;">.</button>
+        <button onclick="calcInput.value=''" style="padding:10px;font-size:16px;border-radius:5px;">C</button>
+        <button onclick="calcInput.value+='+'" style="padding:10px;font-size:16px;border-radius:5px;">+</button>
+        <button onclick="try{calcInput.value=eval(calcInput.value)}catch(e){calcInput.value='Error'}" style="grid-column:1/5;padding:10px;font-size:16px;border-radius:5px;background:#45f;">=</button>
+    </div>
+</div>
+<script>var calcInput=document.getElementById('calcInput');</script>
+
 </body>
 </html>
